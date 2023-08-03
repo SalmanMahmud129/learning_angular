@@ -1,18 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TaskListComponent } from './task-list/task-list.component';
+import { TaskListModule } from './task-list/task-list.module';
+import { CalendarModule } from './calendar/calendar.module';
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TaskListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TaskListModule,
+    CommonModule,
+    CalendarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
